@@ -5,8 +5,6 @@ This repository has basing algorithm stuffs but also coding test cases.
 
 # Contents
 
----
-
 ### Sorting
 
 ### Searching
@@ -31,5 +29,5 @@ This repository has basing algorithm stuffs but also coding test cases.
 
 ### ETC Part
 
-    [00. in_output_arithmetics](./etc/00.in_output%26arithmetic/)
-    [01. conditional statement](./etc/01_conditional%20statement/)
+[00. in_output_arithmetics](./etc/00.in_output%26arithmetic/)
+[01. conditional statement](./etc/01_conditional%20statement/)
