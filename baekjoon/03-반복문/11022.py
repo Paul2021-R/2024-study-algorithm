@@ -47,21 +47,22 @@
 # 사칙연산
 
 # 기존버전
-# n = int(input())
+n = int(input())
 
-# for i in range(n):
-#     a, b = map(int, input().split())
-#     c = a + b
-#     number = i + 1
-#     str = "Case #"
-#     print(str, number, ": ", a, " + ", b, " = ", c, sep='')
+for i in range(n):
+    a, b = map(int, input().split())
+    c = a + b
+    number = i + 1
+    str = "Case #"
+    print(str, number, ": ", a, " + ", b, " = ", c, sep='')
 
 # 개선 버전
+# 출력 줄이기 
 import sys
 
 n = int(input()) + 1
 answer = ""
 for i in range(1, n):
     a, b = map(int, sys.stdin.readline().split())
-    answer = "Case #" + str(i) + ": " + str(a) + " + " + str(b) + " = " + str(a+b) + "\n"
+    answer += "Case #" + str(i) + ": " + str(a) + " + " + str(b) + " = " + str(a+b) + "\n"
 print(answer, end="")

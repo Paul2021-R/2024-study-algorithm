@@ -25,3 +25,17 @@
 # 문제의 오타를 찾은 사람: namnamseo
 # 알고리즘 분류
 # 구현
+
+# 기존 버전
+n = int(input())
+
+for i in range(1, n + 1):
+    print(' ' * (n - i), '*' * i, sep='')
+
+# 개선 버전
+n = int(input())
+
+answer = ""
+for i in range(1, n + 1):
+    answer += ' ' * (n - i) +  '*' * i + "\n"
+print(answer)
