@@ -1,0 +1,3 @@
+[submodule "study_python"]
+	path = study_python
+	url = https://github.com/Paul2021-R/study_python.git
