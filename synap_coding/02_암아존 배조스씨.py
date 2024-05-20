@@ -8,7 +8,7 @@
 # 어절 조건 -> 모든 값의 단위가 0이 아닐 때
 # 기초 클래스(천단위) -> 모든 단위가 1글자
 class NumberUnit:
-    def __init__(self, value, end):
+    def __init__(self, value, end)
         self.value = value
         self.numb_arr = {x: 0 for x in range(4, 1)}
         i = len(value)
