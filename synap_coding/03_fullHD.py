@@ -5,7 +5,37 @@
 # 가로 줄에서 어디까지를 사용범위로 둘지 기재하는 방식
 # 사전 형태가 가지는 특성을 잘 활용한다면 충분히 해결이 가능한 문제다.
 
-# 1. 두 점 위치를 받는다.
-# 2. 두 점 사이의 높이 값을 확인하고, 높이값 기준으로 전체를 돌면다.
-# 3. 높이를 기준 필요한 영역을 순차적으로 돌면서, 값이 없는 사전형 맵에 + 1이 등록한다.
-# 4. 그렇게 최종적으로 전체 루프를 더 채워 나간 뒤, 전체 합을 구한다.
+# 1920 의 가로 길이 만큼의 사전형
+# 그 지목된 세로 위치 좌표를 리스트로 가짐
+# 1920개의 사전 자료 기준으로 돌면서, 지목된 세로 좌표를 전체 개수를 구하고 더하면 됨
+# 내부 자료는 집합형을 사용하면 됨
+
+
+maximum_range = 1921
+
+def total_sum(display_dots):
+    result = 0
+    for index in range(len(display_dots)):
+        result += len(display_dots[index])
+    return result
+
+
+display = {x: set() for x in range(maximum_range)}
+
+# with open('sample_box.txt', 'r', encoding='utf-8') as file:
+with open('box.txt', 'r', encoding='utf-8') as file:
+    for line in file:
+        # print(line.strip())
+        x_1, y_1, x_2, y_2 = map(int, line.strip().split())
+        # print(x_1, y_1, "/", x_2, y_2)
+        for x in range(x_1, x_2):
+            # print(x)
+            for y in range(y_1, y_2):
+                # print("coord", x, y)
+                display[x].add(y)
+    file.close()
+
+    # for x in range(maximum_range):
+    #     print(display[x])
+
+    print(total_sum(display))
